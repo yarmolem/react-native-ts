@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import TiposBasicos from './sections/TiposBasicos'
+// import ObjetosLiterales from './sections/ObjetosLiterales'
+import Funciones from './sections/Funciones'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen w-full bg-gray-800">
+      <div className="max-w-4xl mx-auto px-4 pt-10 w-full h-full text-white">
+        <h1 className="text-6xl pb-2">Introduccion a React + TS</h1>
+        <hr className="pb-2" />
+        {/* <TiposBasicos /> */}
+        {/* <ObjetosLiterales /> */}
+        <Funciones />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
