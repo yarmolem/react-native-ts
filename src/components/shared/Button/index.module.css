@@ -1,0 +1,34 @@
+/* BASIC BUTTON */
+.btn {
+  @apply mr-3
+  mb-3
+  px-5
+  py-2.5
+  text-sm
+  rounded-lg
+  font-medium
+  text-center;
+}
+
+/* SOLID BUTTON */
+.solid {
+  @apply bg-current;
+}
+
+.solid span {
+  @apply text-white;
+}
+
+/* OUTLINE BUTTON */
+.outline {
+  @apply border border-current hover:bg-current;
+}
+
+/* COLOR SCHEMAS */
+.blue {
+  @apply text-blue-700;
+}
+
+.red {
+  @apply text-red-500;
+}

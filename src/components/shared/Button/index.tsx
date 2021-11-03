@@ -3,18 +3,26 @@ import styles from './index.module.css'
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode
   variants?: 'solid' | 'outline'
+  colorSchema?: 'blue' | 'red'
 }
 
 const Button = ({
   children,
-  variants = 'solid',
   className,
+  variants = 'solid',
+  colorSchema = 'blue',
   ...props
 }: ButtonProps) => {
-  const stylesClass = [className, styles.btn, styles[variants]].join(' ')
+  const stylesClass = [
+    'group',
+    className,
+    styles.btn,
+    styles[variants],
+    styles[colorSchema]
+  ].join(' ')
   return (
     <button {...props} className={stylesClass}>
-      {children}
+      <span className="group-hover:text-white">{children}</span>
     </button>
   )
 }
